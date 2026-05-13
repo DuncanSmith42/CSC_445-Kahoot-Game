@@ -1,4 +1,3 @@
-package org.example.Shared;
 
 /**
  * Question.java
