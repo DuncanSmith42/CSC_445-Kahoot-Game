@@ -1,10 +1,11 @@
+package Shared;
 
 /**
- * Question.java
+ * Shared.Question.java
  *
  * Data model for a single quiz question.
  * Loaded from questions.json by QuestionLoader on the server,
- * then sent to clients inside a Message over the network.
+ * then sent to clients inside a Shared.Message over the network.
  */
 public class Question {
 
@@ -48,6 +49,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return String.format("Question{text='%s', answer='%s'}", text, answer);
+        return String.format("Shared.Question{text='%s', answer='%s'}", text, answer);
     }
 }

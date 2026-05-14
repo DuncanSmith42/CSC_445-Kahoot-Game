@@ -1,6 +1,7 @@
+package Shared;
 
 /**
- * GameConfig.java
+ * Shared.GameConfig.java
  *
  * Central place for all game constants.
  * Both the server and client import this file.

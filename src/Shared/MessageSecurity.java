@@ -1,3 +1,4 @@
+package Shared;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -7,14 +8,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Collections;
-import java.util.HexFormat;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+
 public class MessageSecurity {
-
-
-
-
         // ----------------------------------------------------------------
         // Shared server-to-server secret (all 3 Raft nodes share this)
         // In a real system this would be loaded from a config file or env var
@@ -50,7 +48,7 @@ public class MessageSecurity {
         /**
          * Verifies a received message. Checks:
          *   1. HMAC signature matches (integrity)
-         *   2. Message is not too old (freshness)
+         *   2. Shared.Message is not too old (freshness)
          *   3. Nonce has not been seen before (replay prevention)
          *
          * @param message   the received message
